@@ -4,6 +4,10 @@
 
 ## 2. Requerimientos a Evaluar
 
+### RF-01 Registro de Estudiante (Edad)
+
+El sistema debe permitir el registro de estudiantes cuya edad esté entre 16 y 65 años inclusive.
+
 ### RF-02 Código de Estudiante
 
 El código del estudiante debe:
@@ -13,9 +17,29 @@ Los 7 caracteres restantes deben ser numéricos.
 
 ## 3. Tecnicas de Prueba Aplicadas
 
+### RF-01 Registro de Estudiante (Edad)
+
+Para este requerimiento decidimos usar la prueba **"Analisis de Valor Limite (BVA)"**. Porque la entrada (Edad) tiene un rango numerico definido, siendo en este caso 16 y 65.
+
+### RF-02 Código de Estudiante
+
 La tecnica de prueba que hemos selecionado es **Partición de equivalencia**, ya que tenemos un valor especifico valido: el codigo debe tener 8 caracteres, debe inicar con la letra E, y que los 7 caracteres restantes sean númericos, así que cualquiera que se salga del molde es una contraseña invalida. 
 
 ## 4. Casos de Prueba Diseñados
+
+### RF-01 Registro de Estudiante (Edad)
+
+| Caso | Edad |            Limite            | Resultado esperado |
+|------|------|------------------------------|--------------------|
+|  L1  |  15  | Justo debajo del limite      | Invalido |
+|  L2  |  16  | El valor del limite inferior | Valido |
+|  L3  |  17  | Justo arriba del limite      | Valido |
+|  L4  |  64  | Justo debajo del limite      | Valido |
+|  L5  |  65  | El valor del limite superior | Valido |
+|  L6  |  66  | Justo arriba del limite      | Invalido |
+
+### RF-02 Código de Estudiante
+
 | Criterio                     | Clases Válidas (V)        | Clases Inválidas (I)                                      |
 |------------------------------|---------------------------|------------------------------------------------------------|
 | Longitud de la contraseña    | V1: 8 caracteres          | I1: Menos de 8 caracteres                                  |
@@ -31,8 +55,8 @@ La tecnica de prueba que hemos selecionado es **Partición de equivalencia**, ya
 | CP-04  | Verificar que se rechace contraseña con letras después de la primera posición | El usuario se encuentra en el formulario de registro | E12345A7       | El sistema muestra mensaje: "Solo se permiten números después de la primera posición" | Pendiente |
 | CP-05  | Verificar que se rechace contraseña con caracteres especiales              | El usuario se encuentra en el formulario de registro | E12345#7       | El sistema muestra mensaje de formato inválido          | Invalido |
 
-  
 
 ## 5. Trazabilidad
 
 ## 6. Gestion de Versiones (GitFlow)
+
