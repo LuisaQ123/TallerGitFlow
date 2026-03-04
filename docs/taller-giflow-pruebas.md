@@ -16,6 +16,8 @@ Para este requerimiento decidimos usar la prueba **"Analisis de Valor Limite (BV
 
 ## 4. Casos de Prueba Diseñados
 
+### RF-01 Registro de Estudiante (Edad)
+
 | Caso | Edad |            Limite            | Resultado esperado |
 |------|------|------------------------------|--------------------|
 |  L1  |  15  | Justo debajo del limite      | Invalido |
