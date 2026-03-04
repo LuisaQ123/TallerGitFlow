@@ -16,13 +16,14 @@ Para este requerimiento decidimos usar la prueba **"Analisis de Valor Limite (BV
 
 ## 4. Casos de Prueba Diseñados
 
-Caso | Edad | Limite | Resultado esperado
-L1 | 15 | Justo debajo del limite | Invalido
-L2 | 16 | El valor del limite inferior | Valido
-L3 | 17 | Justo arriba del limite | Valido
-L4 | 64 | Justo debajo del limite | Valido
-L5 | 65 | El valor del limite superior | Valido
-L6 | 66 | Justo arriba del limite | Invalido
+| Caso | Edad |            Limite            | Resultado esperado |
+|------|------|------------------------------|--------------------|
+|  L1  |  15  | Justo debajo del limite      | Invalido |
+|  L2  |  16  | El valor del limite inferior | Valido |
+|  L3  |  17  | Justo arriba del limite      | Valido |
+|  L4  |  64  | Justo debajo del limite      | Valido |
+|  L5  |  65  | El valor del limite superior | Valido |
+|  L6  |  66  | Justo arriba del limite      | Invalido |
 
 ## 5. Trazabilidad
 
