@@ -2,6 +2,8 @@
 
 ## 1. Descripcion del Sistema
 
+El sistema permite gestionar el registro de estudiantes y su participacion en eventos, los estudiantes pueden registrarse siempre que su edad este entre 16 y 65 años y que tengan un codigo de estudiante valido. Tambien pueden inscribirse a eventos disponibles, siempre que existan cupos y no esten previamente inscritos en el evento.
+
 ## 2. Requerimientos a Evaluar
 
 ## 3. Tecnicas de Prueba Aplicadas
