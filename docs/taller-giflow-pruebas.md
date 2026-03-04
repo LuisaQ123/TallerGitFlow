@@ -15,6 +15,15 @@ Tener exactamente 8 caracteres.
 Iniciar con la letra “E”.
 Los 7 caracteres restantes deben ser numéricos.
 
+### RF-03 Inscripción a Evento
+
+Un estudiante podrá inscribirse a un evento solo si:
+
+Está registrado.
+El evento tiene cupos disponibles.
+No está previamente inscrito.
+Si alguna condición no se cumple, el sistema no debe permitir la inscripción.
+
 ## 3. Tecnicas de Prueba Aplicadas
 
 ### RF-01 Registro de Estudiante (Edad)
@@ -23,7 +32,13 @@ Para este requerimiento decidimos usar la prueba **"Analisis de Valor Limite (BV
 
 ### RF-02 Código de Estudiante
 
-La tecnica de prueba que hemos selecionado es **Partición de equivalencia**, ya que tenemos un valor especifico valido: el codigo debe tener 8 caracteres, debe inicar con la letra E, y que los 7 caracteres restantes sean númericos, así que cualquiera que se salga del molde es una contraseña invalida. 
+La tecnica de prueba que hemos selecionado es **Partición de equivalencia**, ya que tenemos un valor especifico valido: el codigo debe tener 8 caracteres, debe iniciar con la letra E, y que los 7 caracteres restantes sean númericos, así que cualquiera que se salga del molde es una contraseña invalida. 
+
+### RF-03 Inscripción a Evento
+
+Para este requerimiento vamos a usar **Tabla de Decisión**. 
+
+El requerimiento contiene múltiples condiciones booleanas que determinan una acción. La tabla de decisión permite analizar todas las combinaciones posibles y validar el comportamiento del sistema.
 
 ## 4. Casos de Prueba Diseñados
 
@@ -55,6 +70,15 @@ La tecnica de prueba que hemos selecionado es **Partición de equivalencia**, ya
 | CP-04  | Verificar que se rechace contraseña con letras después de la primera posición | El usuario se encuentra en el formulario de registro | E12345A7       | El sistema muestra mensaje: "Solo se permiten números después de la primera posición" | Pendiente |
 | CP-05  | Verificar que se rechace contraseña con caracteres especiales              | El usuario se encuentra en el formulario de registro | E12345#7       | El sistema muestra mensaje de formato inválido          | Invalido |
 
+### RF-03 Inscripción a Evento
+
+| Condiciones                      | R1 | R2 | R3 |R4|
+|----------------------------------|----|----|----|----|
+| Esta regristrado                 | Si | NO |NO  | SI
+| El evento tiene cupos disponibles| SI | SI |NO  | NO
+| No esta previamente escrito      | SI | SI |NO  | NO
+| Permitir Incripcion              | X  |    |    |
+| No permitir Incripcion           |    |X   | X  | X
 
 ## 5. Trazabilidad
 
